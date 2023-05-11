@@ -47,6 +47,13 @@ const ex2 = () => {
     let str = "today this is a this is a this is a test.";
     console.log(displayThis(str));this
    }
+
+   const ex6 = () => {
+    let array = ['this', 'is', 'a', 'test', 'happy'];
+    // let array = ['month', 'is', 'a', 'test', 'happy'];
+    // let array = ['this', 'is', 'a', 'test', 'happy', 'supercalifragilisticexpialidocious'];
+    console.log(longestString(array));
+   }
     
 
 /*
@@ -113,7 +120,7 @@ const palidrome = (string) => {
 const displayThis = (str) => {
     let count = 0;
     let array = str.split(" ");
-for (let i =0; i <array.length; i++){
+for (let i = 0; i <array.length; i++){
         if (array[i] === 'this' || array[i] === 'this.') {
             count++;
         }
@@ -123,11 +130,23 @@ for (let i =0; i <array.length; i++){
 console.log(str.split(" "))
 }
 
+const longestString = (array) => {
+    
+    let longestWord = array[0];  //this
+    for (let i = 0; i <array.length; i++){
+        if (array[i].length > longestWord.length){  //5 > 4
+           longestWord = array[i];
+        }
+        
+    }
+    return longestWord
+} 
+
                
 
 const main = async () => {
     // ex1();
-    ex5(); 
+    ex6(); 
 }
 
 main();
