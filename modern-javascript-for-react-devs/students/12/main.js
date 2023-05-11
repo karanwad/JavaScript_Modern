@@ -35,12 +35,18 @@ const ex2 = () => {
 
     console.log(palidrome('radar'));
     console.log(palidrome('month'));
+
+    //additional test cases
     console.log(palidrome('otto'));
     console.log(palidrome('racecar'));
     console.log(palidrome('cat'));
     console.log(palidrome('dog'));
    } 
     
+   const ex5 = () => {
+    let str = "today this is a this is a this is a test.";
+    console.log(displayThis(str));this
+   }
     
 
 /*
@@ -88,6 +94,8 @@ const interleave = (array1, array2) => {
     return newStr;
 }
 
+//ex4
+
 const palidrome = (string) => {
     for (let i =0; i <string.length; i++) {
         if (string[i] !== string[string.length - 1 - i]) {
@@ -100,11 +108,26 @@ const palidrome = (string) => {
 
 }
 
+//ex5
+
+const displayThis = (str) => {
+    let count = 0;
+    let array = str.split(" ");
+for (let i =0; i <array.length; i++){
+        if (array[i] === 'this' || array[i] === 'this.') {
+            count++;
+        }
+
+    }
+    return "this appears: " + count + " times."
+console.log(str.split(" "))
+}
+
                
 
 const main = async () => {
     // ex1();
-    ex4(); 
+    ex5(); 
 }
 
 main();
