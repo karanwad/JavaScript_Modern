@@ -31,7 +31,15 @@ const ex2 = () => {
         // console.log(interleave(array1, array2));
     }
     
-    
+   const ex4 = () => {
+
+    console.log(palidrome('radar'));
+    console.log(palidrome('month'));
+    console.log(palidrome('otto'));
+    console.log(palidrome('racecar'));
+    console.log(palidrome('cat'));
+    console.log(palidrome('dog'));
+   } 
     
     
 
@@ -79,11 +87,24 @@ const interleave = (array1, array2) => {
 
     return newStr;
 }
+
+const palidrome = (string) => {
+    for (let i =0; i <string.length; i++) {
+        if (string[i] !== string[string.length - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
+    
+
+}
+
                
 
 const main = async () => {
     // ex1();
-    ex3(); 
+    ex4(); 
 }
 
 main();
